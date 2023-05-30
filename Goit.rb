@@ -5,20 +5,20 @@
 class Goit < Formula
   desc ""
   homepage ""
-  version "1.4.1"
+  version "1.5.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.4.1/Goit_Darwin_x86_64.tar.gz"
-      sha256 "ad7e1d2644e66636be6fd54ade0c67a337e41b4ee1b2f6985d00f2ced2f557ec"
+    if Hardware::CPU.arm?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Darwin_arm64.tar.gz"
+      sha256 "1e4df1891b9a03a631422053336807b78fde08a3c037cbdfc179d16fc766fb89"
 
       def install
         bin.install "Goit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.4.1/Goit_Darwin_arm64.tar.gz"
-      sha256 "b9cb59d7b7b7be35d2e85034e8ebe04ef9ab4cb65f79b2376b64b9205a9b2e56"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Darwin_x86_64.tar.gz"
+      sha256 "8801de91531b9c1e4026f56ba6b21784d307deeacd5b7657368fad1e985edfe4"
 
       def install
         bin.install "Goit"
@@ -28,16 +28,16 @@ class Goit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.4.1/Goit_Linux_arm64.tar.gz"
-      sha256 "ef1b4fb98b385851f90ab5936319e46796fd87cfc4ef0db000ee96df36b278a2"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Linux_arm64.tar.gz"
+      sha256 "5098f656b0bc9385eb429895bdcbfdf9470326cc2c71268b10af5dc8ba8cccd3"
 
       def install
         bin.install "Goit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.4.1/Goit_Linux_x86_64.tar.gz"
-      sha256 "ea964b917651c2df27c44e76dc409a2a0263abcc4d0eec85454bdb2367ff0c29"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Linux_x86_64.tar.gz"
+      sha256 "44c99e532fa092f306d2b55d7db554eee0492454ab425e36927209ddde2ef7be"
 
       def install
         bin.install "Goit"

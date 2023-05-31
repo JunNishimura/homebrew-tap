@@ -5,20 +5,20 @@
 class Goit < Formula
   desc ""
   homepage ""
-  version "1.5.0"
+  version "1.5.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Darwin_arm64.tar.gz"
-      sha256 "1e4df1891b9a03a631422053336807b78fde08a3c037cbdfc179d16fc766fb89"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.1/Goit_Darwin_arm64.tar.gz"
+      sha256 "c6e9207e907a1570757f8e19b221fb153eeb59aa4da0765f2a19869aa5aadccd"
 
       def install
         bin.install "Goit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Darwin_x86_64.tar.gz"
-      sha256 "8801de91531b9c1e4026f56ba6b21784d307deeacd5b7657368fad1e985edfe4"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.1/Goit_Darwin_x86_64.tar.gz"
+      sha256 "7f6f0e7611061a034848b2f09881dc632f62c74b52c39515645e02c4954af785"
 
       def install
         bin.install "Goit"
@@ -28,16 +28,16 @@ class Goit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Linux_arm64.tar.gz"
-      sha256 "5098f656b0bc9385eb429895bdcbfdf9470326cc2c71268b10af5dc8ba8cccd3"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.1/Goit_Linux_arm64.tar.gz"
+      sha256 "d49998f08d5d4d5c926cc586d59333908392ee064578f89e91b56a944e785077"
 
       def install
         bin.install "Goit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.0/Goit_Linux_x86_64.tar.gz"
-      sha256 "44c99e532fa092f306d2b55d7db554eee0492454ab425e36927209ddde2ef7be"
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.5.1/Goit_Linux_x86_64.tar.gz"
+      sha256 "290cd61ca91415a8cb36e8cbd6c487732bca60c60b83ffe427518b8b17f53618"
 
       def install
         bin.install "Goit"

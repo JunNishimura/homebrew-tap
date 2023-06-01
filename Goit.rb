@@ -5,20 +5,20 @@
 class Goit < Formula
   desc ""
   homepage ""
-  version "1.6.1"
+  version "1.6.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.1/Goit_Darwin_x86_64.tar.gz"
-      sha256 "ee1f406263a816fdcfcceeb5d54709581d04359d748bb02971b609eb17ad61d0"
+    if Hardware::CPU.arm?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.2/Goit_Darwin_arm64.tar.gz"
+      sha256 "d1e47d44d17fdd644709eaff66a0e8690d94c8e54d73a85cf2aa39f92da40e9b"
 
       def install
         bin.install "Goit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.1/Goit_Darwin_arm64.tar.gz"
-      sha256 "3f49e47424d2a73691b7e7bb53c099920b79ed86533ced7461300060041e1c22"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.2/Goit_Darwin_x86_64.tar.gz"
+      sha256 "33292303b3777b746d6a98cc7e0d3210ca8581b24ea74758391f55d725523b7b"
 
       def install
         bin.install "Goit"
@@ -27,17 +27,17 @@ class Goit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.1/Goit_Linux_x86_64.tar.gz"
-      sha256 "a78c05c75163e241ae0ae28c1e7c8016b22c3cd82db834ad2beed7cae25307c1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.2/Goit_Linux_arm64.tar.gz"
+      sha256 "25eb3571dfc431cac6ecc8fb38424c06bdb69012d5d996be2a71fffae038f889"
 
       def install
         bin.install "Goit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.1/Goit_Linux_arm64.tar.gz"
-      sha256 "4e6c46219531b252ff812d0d27638ca6ad17130180c371590b3f127ca6c11ff0"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Goit/releases/download/v1.6.2/Goit_Linux_x86_64.tar.gz"
+      sha256 "74b6fbb3ed076eabe011861486bbe05a0a57a4de125b3b15252dec4c6464af2b"
 
       def install
         bin.install "Goit"

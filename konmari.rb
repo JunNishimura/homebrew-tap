@@ -5,20 +5,20 @@
 class Konmari < Formula
   desc ""
   homepage ""
-  version "0.0.2"
+  version "0.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.0.2/konmari_Darwin_arm64.tar.gz"
-      sha256 "2c46d5cb2c1fcade2faa1334570187b342529e3fda0fb3f59a7d6acf6fc2db3f"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.0/konmari_Darwin_x86_64.tar.gz"
+      sha256 "342abbda4637995e24899725e93a911c8c9fd563e85ac2e3b7a37e3f63ab328f"
 
       def install
         bin.install "konmari"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.0.2/konmari_Darwin_x86_64.tar.gz"
-      sha256 "4e3329ea4405098304804910bdc1ef5dcc0a247b6610ec7b8ff8e1ac665bcf83"
+    if Hardware::CPU.arm?
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.0/konmari_Darwin_arm64.tar.gz"
+      sha256 "2afb96f42f4f7e9ffecd073e040a3dc56614448cb0ae2efeb80e77098b932f97"
 
       def install
         bin.install "konmari"
@@ -27,17 +27,17 @@ class Konmari < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.0.2/konmari_Linux_x86_64.tar.gz"
-      sha256 "4afbace3b8a0a50e58bc9e14d91f34ee286dd7501122c980a510d1cfec3182d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.0/konmari_Linux_arm64.tar.gz"
+      sha256 "6d5ff5295475d46f9de1c79103e76086e2d8be53f0524846c693418ee5691065"
 
       def install
         bin.install "konmari"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.0.2/konmari_Linux_arm64.tar.gz"
-      sha256 "8e9245a08aa3b7a4c941ae707a887267e881f11274039487270028b33dddafd5"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.0/konmari_Linux_x86_64.tar.gz"
+      sha256 "e275accaf9cf946c199c5d7c61f60fb1d3e63ef8feb742e63462f4dcff5f2827"
 
       def install
         bin.install "konmari"

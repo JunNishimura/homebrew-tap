@@ -5,20 +5,20 @@
 class Konmari < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.1/konmari_Darwin_x86_64.tar.gz"
-      sha256 "1b05a9b5a983bcf9a375894cff917f7cebe4fdb220569b8447df6e381f35ab10"
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.2.0/konmari_Darwin_x86_64.tar.gz"
+      sha256 "cd9667189c64e916a572f6660ff339e10213e44e871cd8c9bdb47765b22a4129"
 
       def install
         bin.install "konmari"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.1/konmari_Darwin_arm64.tar.gz"
-      sha256 "b5898e3b545bfdbdac20914df3b1c9df7b6d44c398c650d87525aaba42063609"
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.2.0/konmari_Darwin_arm64.tar.gz"
+      sha256 "8631a198c925a1944121c93c504fcfa7d59e782d2d31a4e2211582f2d98d1588"
 
       def install
         bin.install "konmari"
@@ -28,16 +28,16 @@ class Konmari < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.1/konmari_Linux_arm64.tar.gz"
-      sha256 "5590a3938010eda84d1e555676b62ea5974c96045b194d620e8a361b1e207faa"
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.2.0/konmari_Linux_arm64.tar.gz"
+      sha256 "86103bf1a7dcfb68434e7759d2865db7b7ab62803931d652826d65fdf86b45a7"
 
       def install
         bin.install "konmari"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/konmari/releases/download/v0.1.1/konmari_Linux_x86_64.tar.gz"
-      sha256 "0f9b5b6bea25220943079f6feba19930ddb9e1814174efed40f60656808e50e3"
+      url "https://github.com/JunNishimura/konmari/releases/download/v0.2.0/konmari_Linux_x86_64.tar.gz"
+      sha256 "8d68332665c6d714b8be31ca7ba76a6eb4f298fd840ac549a61cd3a9b749e19f"
 
       def install
         bin.install "konmari"

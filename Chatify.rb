@@ -5,20 +5,20 @@
 class Chatify < Formula
   desc ""
   homepage ""
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.1/Chatify_Darwin_x86_64.tar.gz"
-      sha256 "00ff59a32d7d21b84a4e3021c7695b833ec6f0f406d5141deca5c2279064d1c0"
+    if Hardware::CPU.arm?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Darwin_arm64.tar.gz"
+      sha256 "6db082cf463e1e664c28a5ac978f73487b23ca6e42865280630e5c2783f5241f"
 
       def install
         bin.install "Chatify"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.1/Chatify_Darwin_arm64.tar.gz"
-      sha256 "2da28ac5505d77c1adb076389fb2a0336696e32fdfca4eb586e0f4b1d0b457d4"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Darwin_x86_64.tar.gz"
+      sha256 "a02ba3e033584c237b8a2bef089fa7e3f965bb85a43736c71f56b1c4a7ebe411"
 
       def install
         bin.install "Chatify"
@@ -28,16 +28,16 @@ class Chatify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.1/Chatify_Linux_arm64.tar.gz"
-      sha256 "43dc1ba1259e28b6e5ec0b8a4729eac14fc8c8595924f0c8c31b6969e0a27712"
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Linux_arm64.tar.gz"
+      sha256 "0c7a2d57eb376279132fb153b5c23d1756cf6ce1114897fa21e813c5ceb6e2bd"
 
       def install
         bin.install "Chatify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.1/Chatify_Linux_x86_64.tar.gz"
-      sha256 "64cd03cc1d5edf304e051db988564561ed1d270410e637cf8f29c544ead51996"
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Linux_x86_64.tar.gz"
+      sha256 "2d2d860572ac341726eb1bb3f5018a2c808aa2f88925f5569f0669c9b9be156d"
 
       def install
         bin.install "Chatify"

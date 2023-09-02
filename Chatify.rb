@@ -5,20 +5,20 @@
 class Chatify < Formula
   desc ""
   homepage ""
-  version "1.0.2"
+  version "1.1.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Darwin_arm64.tar.gz"
-      sha256 "6db082cf463e1e664c28a5ac978f73487b23ca6e42865280630e5c2783f5241f"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.1.0/Chatify_Darwin_x86_64.tar.gz"
+      sha256 "1c61eeef75ab6c363c9aa563c36fdd36efea128a5f82a16c68422228cf499310"
 
       def install
         bin.install "Chatify"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Darwin_x86_64.tar.gz"
-      sha256 "a02ba3e033584c237b8a2bef089fa7e3f965bb85a43736c71f56b1c4a7ebe411"
+    if Hardware::CPU.arm?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.1.0/Chatify_Darwin_arm64.tar.gz"
+      sha256 "594cac2dd7a38b4d0733ebcae9640febb893687dbd6c7011573fc269afe95c43"
 
       def install
         bin.install "Chatify"
@@ -27,17 +27,17 @@ class Chatify < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Linux_arm64.tar.gz"
-      sha256 "0c7a2d57eb376279132fb153b5c23d1756cf6ce1114897fa21e813c5ceb6e2bd"
+    if Hardware::CPU.intel?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.1.0/Chatify_Linux_x86_64.tar.gz"
+      sha256 "106f5e504976a86b2d32090a1d889c6e172f2957cd8e9a43c0f06b892994675f"
 
       def install
         bin.install "Chatify"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/JunNishimura/Chatify/releases/download/v1.0.2/Chatify_Linux_x86_64.tar.gz"
-      sha256 "2d2d860572ac341726eb1bb3f5018a2c808aa2f88925f5569f0669c9b9be156d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/JunNishimura/Chatify/releases/download/v1.1.0/Chatify_Linux_arm64.tar.gz"
+      sha256 "3c082af48b3aed4ce03bb8d0fef73425753168aa6fcc1cbfb8221474c24e1d75"
 
       def install
         bin.install "Chatify"

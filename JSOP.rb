@@ -5,20 +5,20 @@
 class Jsop < Formula
   desc ""
   homepage ""
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/JunNishimura/JSOP/releases/download/v1.0.0/JSOP_Darwin_x86_64.tar.gz"
-      sha256 "a869b2b61c5aa119d03c04013a680392b61a53620d32c6f5412a61683d1562fa"
+      url "https://github.com/JunNishimura/JSOP/releases/download/v1.1.0/JSOP_Darwin_x86_64.tar.gz"
+      sha256 "9943614be3d27368c52a8fc0fded20e415a41d68fcd25211cb2198482779f86d"
 
       def install
         bin.install "JSOP"
       end
     end
     on_arm do
-      url "https://github.com/JunNishimura/JSOP/releases/download/v1.0.0/JSOP_Darwin_arm64.tar.gz"
-      sha256 "e99db5c5fb51bbb8a90207e259ae2e963a4f0b145604db4a13a4f646f5d35b01"
+      url "https://github.com/JunNishimura/JSOP/releases/download/v1.1.0/JSOP_Darwin_arm64.tar.gz"
+      sha256 "8eaff89487c3b06328de010abdeb51b461d7c1d15cd886b936972eb1d1684481"
 
       def install
         bin.install "JSOP"
@@ -29,8 +29,8 @@ class Jsop < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JunNishimura/JSOP/releases/download/v1.0.0/JSOP_Linux_x86_64.tar.gz"
-        sha256 "aeff5354fb0c611847807e5b324d403d78f0c76a859158ee5eb40f6644c0df84"
+        url "https://github.com/JunNishimura/JSOP/releases/download/v1.1.0/JSOP_Linux_x86_64.tar.gz"
+        sha256 "71a5369c73d8bcaadd786ad965f02e814f0c81583d5116b84855ddbab30e6fbf"
 
         def install
           bin.install "JSOP"
@@ -39,8 +39,8 @@ class Jsop < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/JunNishimura/JSOP/releases/download/v1.0.0/JSOP_Linux_arm64.tar.gz"
-        sha256 "e97504ec9b44fd1903547b51c51c75f4b7c38cd20f87e9599d6ac014fdb1cba3"
+        url "https://github.com/JunNishimura/JSOP/releases/download/v1.1.0/JSOP_Linux_arm64.tar.gz"
+        sha256 "57869198059e1833daac3b1fbfb302b84e694897f30993718a26561a81c81d1a"
 
         def install
           bin.install "JSOP"
